@@ -1,4 +1,4 @@
-rosbridge_.net_client
+Rosbridge .NET Client
 =====================
 
 A .NET Rosbridge Client Library
