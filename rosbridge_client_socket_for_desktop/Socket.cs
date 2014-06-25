@@ -56,7 +56,7 @@ namespace Rosbridge.Client
         /// <summary>
         /// Opens a connection to the rosbridge server
         /// </summary>
-        /// <returns>A task which completes once the connect is done</returns>
+        /// <returns>True if the connect was successful</returns>
         /// <exception cref="System.ObjectDisposedException">This socket is already _disposed</exception>
         public Task<bool> ConnectAsync()
         {
@@ -78,6 +78,7 @@ namespace Rosbridge.Client
         /// <summary>
         /// Closes a connection to the rosbridge server
         /// </summary>
+        /// <returns>True if the disconnect was successful</returns>
         /// <exception cref="System.ObjectDisposedException">This socket is already _disposed</exception>
         public Task<bool> DisconnectAsync()
         {
