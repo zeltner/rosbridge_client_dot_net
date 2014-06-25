@@ -18,18 +18,20 @@ namespace Rosbridge.Client
         /// <summary>
         /// Opens a connection to the rosbridge server
         /// </summary>
-        void Connect();
+        /// <returns>True if the connect was successful</returns>
+        Task<bool> ConnectAsync();
 
         /// <summary>
         /// Closes a connection to the rosbridge server
         /// </summary>
-        void Disconnect();
+        /// <returns>True if the disconnect was successful</returns>
+        Task<bool> DisconnectAsync();
 
         /// <summary>
         /// Sends a message to the rosbridge server
         /// </summary>
-        /// <param name="message">Mesage to Send</param>
-        /// <returns>A task which handles the send</returns>
+        /// <param name="buffer">Mesage to Send</param>
+        /// <returns>A task which completes once the send is done</returns>
         Task SendAsync(byte[] buffer);
 
         /// <summary>
