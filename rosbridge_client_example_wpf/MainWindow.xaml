@@ -1,0 +1,74 @@
+﻿<Window x:Class="rosbridge_client_example_wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <GroupBox Grid.Row="0" Header="Rosbridge" Margin="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0" Grid.Row="1">Rosbridge Server URI</Label>
+                <TextBox Grid.Column="1" Grid.Row="1" x:Name="URITextBox" TextAlignment="Center"></TextBox>
+                <Label Grid.Column="1" Grid.Row="2" FontSize="8">E.g.: ws://localhost:9090</Label>
+                
+                <Button Grid.Column="2" Grid.Row="1" x:Name="ConnectButton" Click="ConnectButton_Click" Margin="10 0 0 0">Connect</Button>
+            </Grid>
+
+        </GroupBox>
+
+        <GroupBox x:Name="PublishGroupBox" Grid.Row="1" Header="Publish" Margin="10">
+            
+        </GroupBox>
+
+        <GroupBox x:Name="SubscribeGroupBox" Grid.Row="2" Header="Subscribe" Margin="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                
+                <Label Grid.Column="0" Grid.Row="1">Topic</Label>
+                <TextBox Grid.Column="1" Grid.Row="1" x:Name="TopicTextBox" TextAlignment="Center"></TextBox>
+
+                <Label Grid.Column="2" Grid.Row="1" Margin="10 0 0 0">Message Type</Label>
+                <TextBox Grid.Column="3" Grid.Row="1" x:Name="TypeTextBox" TextAlignment="Center"></TextBox>
+                
+                <Button Grid.Column="4" Grid.Row="1" x:Name="StartSubscriberButton" Margin="10 0 0 0" Click="StartSubscriberButton_Click">Start Subscriber</Button>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox x:Name="ServicesGroupBox" Grid.Row="3" Header="Services" Margin="10">
+
+        </GroupBox>
+
+    </Grid>
+</Window>
