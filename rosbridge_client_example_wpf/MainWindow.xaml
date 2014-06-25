@@ -29,7 +29,7 @@
 
                 <Label Grid.Column="0" Grid.Row="1">Rosbridge Server URI</Label>
                 <TextBox Grid.Column="1" Grid.Row="1" x:Name="URITextBox" TextAlignment="Center"></TextBox>
-                <Label Grid.Column="1" Grid.Row="2" FontSize="8">E.g.: ws://localhost:9090</Label>
+                <Label Grid.Column="1" Grid.Row="2" FontSize="8">e.g.: ws://localhost:9090</Label>
                 
                 <Button Grid.Column="2" Grid.Row="1" x:Name="ConnectButton" Click="ConnectButton_Click" Margin="10 0 0 0">Connect</Button>
             </Grid>
@@ -58,9 +58,11 @@
                 
                 <Label Grid.Column="0" Grid.Row="1">Topic</Label>
                 <TextBox Grid.Column="1" Grid.Row="1" x:Name="TopicTextBox" TextAlignment="Center"></TextBox>
+                <Label Grid.Column="1" Grid.Row="2" FontSize="8">e.g.: /my__topic</Label>
 
                 <Label Grid.Column="2" Grid.Row="1" Margin="10 0 0 0">Message Type</Label>
                 <TextBox Grid.Column="3" Grid.Row="1" x:Name="TypeTextBox" TextAlignment="Center"></TextBox>
+                <Label Grid.Column="3" Grid.Row="2" FontSize="8">e.g.: std__msgs/String</Label>
                 
                 <Button Grid.Column="4" Grid.Row="1" x:Name="StartSubscriberButton" Margin="10 0 0 0" Click="StartSubscriberButton_Click">Start Subscriber</Button>
             </Grid>
