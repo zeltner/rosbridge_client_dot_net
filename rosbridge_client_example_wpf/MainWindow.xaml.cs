@@ -22,7 +22,7 @@ namespace rosbridge_client_example_wpf
     public partial class MainWindow : Window
     {
         private MessageDispatcher _md;
-        private List<SubscriberWindow> _subscriberWindows = new List<SubscriberWindow>();
+        private List<IChildWindow> _childWindows = new List<IChildWindow>();
         private bool _isConnected = false;
 
         public MainWindow()
@@ -61,19 +61,19 @@ namespace rosbridge_client_example_wpf
             var subscriberWindow = new SubscriberWindow(new Subscriber(TopicTextBox.Text, TypeTextBox.Text, _md));
             subscriberWindow.Show();
 
-            _subscriberWindows.Add(subscriberWindow);
+            _childWindows.Add(subscriberWindow);
         }
 
         private async void ConnectButton_Click(object sender, RoutedEventArgs e)
         {
             if (_isConnected)
             {
-                foreach (var w in _subscriberWindows)
+                foreach (var w in _childWindows)
                 {
                     await w.CleanUp();
-                    w.Close();
+                    (w as Window).Close();
                 }
-                _subscriberWindows.Clear();
+                _childWindows.Clear();
 
                 await _md.StopAsync();
                 _md = null;
@@ -99,6 +99,14 @@ namespace rosbridge_client_example_wpf
             }
 
             ToggleConnected();
+        }
+
+        private void StartPublisherButton_Click(object sender, RoutedEventArgs e)
+        {
+            var publisherWindow = new PublisherWindow(new Publisher(PubTopicTextBox.Text, PubTypeTextBox.Text, _md));
+            publisherWindow.Show();
+
+            _childWindows.Add(publisherWindow);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace rosbridge_client_example_wpf
     /// <summary>
     /// Interaction logic for SubscriberWindow.xaml
     /// </summary>
-    public partial class SubscriberWindow : Window
+    public partial class SubscriberWindow : Window, IChildWindow
     {
         private Subscriber _subscriber;
 

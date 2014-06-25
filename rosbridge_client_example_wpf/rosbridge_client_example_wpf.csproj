@@ -57,6 +57,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="IChildWindow.cs" />
+    <Compile Include="PublisherWindow.xaml.cs">
+      <DependentUpon>PublisherWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SubscriberWindow.xaml.cs">
       <DependentUpon>SubscriberWindow.xaml</DependentUpon>
     </Compile>
@@ -72,6 +76,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PublisherWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SubscriberWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

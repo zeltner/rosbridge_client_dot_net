@@ -37,7 +37,31 @@
         </GroupBox>
 
         <GroupBox x:Name="PublishGroupBox" Grid.Row="1" Header="Publish" Margin="10">
-            
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0" Grid.Row="1">Topic</Label>
+                <TextBox Grid.Column="1" Grid.Row="1" x:Name="PubTopicTextBox" TextAlignment="Center"></TextBox>
+                <Label Grid.Column="1" Grid.Row="2" FontSize="8">e.g.: /my__topic</Label>
+
+                <Label Grid.Column="2" Grid.Row="1" Margin="10 0 0 0">Message Type</Label>
+                <TextBox Grid.Column="3" Grid.Row="1" x:Name="PubTypeTextBox" TextAlignment="Center"></TextBox>
+                <Label Grid.Column="3" Grid.Row="2" FontSize="8">e.g.: std__msgs/String</Label>
+
+                <Button Grid.Column="4" Grid.Row="1" x:Name="StartPublisherButton" Margin="10 0 0 0" Click="StartPublisherButton_Click">Start Publisher</Button>
+            </Grid>
         </GroupBox>
 
         <GroupBox x:Name="SubscribeGroupBox" Grid.Row="2" Header="Subscribe" Margin="10">
