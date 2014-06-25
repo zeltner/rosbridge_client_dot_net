@@ -21,8 +21,8 @@ namespace Rosbridge.Client
         /// <summary>
         /// Opens a connection to the rosbridge server
         /// </summary>
-        /// <returns>True if the connect was successful</returns>
-        public Task<bool> ConnectAsync()
+        /// <returns>A task which completes once the connect is done</returns>
+        public Task ConnectAsync()
         {
             throw new NotImplementedException();
         }
@@ -30,8 +30,8 @@ namespace Rosbridge.Client
         /// <summary>
         /// Closes a connection to the rosbridge server
         /// </summary>
-        /// <returns>True if the disconnect was successful</returns>
-        public Task<bool> DisconnectAsync()
+        /// <returns>A task which completes once the disconnect is done</returns>
+        public Task DisconnectAsync()
         {
             throw new NotImplementedException();
         }

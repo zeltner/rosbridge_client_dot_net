@@ -18,14 +18,14 @@ namespace Rosbridge.Client
         /// <summary>
         /// Opens a connection to the rosbridge server
         /// </summary>
-        /// <returns>True if the connect was successful</returns>
-        Task<bool> ConnectAsync();
+        /// <returns>A task which completes once the connect is done</returns>
+        Task ConnectAsync();
 
         /// <summary>
         /// Closes a connection to the rosbridge server
         /// </summary>
-        /// <returns>True if the disconnect was successful</returns>
-        Task<bool> DisconnectAsync();
+        /// <returns>A task which completes once the disconnect is done</returns>
+        Task DisconnectAsync();
 
         /// <summary>
         /// Sends a message to the rosbridge server
