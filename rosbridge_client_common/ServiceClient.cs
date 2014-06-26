@@ -43,14 +43,14 @@ namespace Rosbridge.Client
         /// <param name="arguments">The service arguments</param>
         /// <returns>The result</returns>
         /// <exception cref="System.ArgumentNullException">'arguments' is null</exception>
-        public Task<List<JToken>> Call(List<dynamic> arguments)
+        public Task<JToken> Call(List<dynamic> arguments)
         {
             if (null == arguments)
             {
                 throw new ArgumentNullException("arguments");
             }
 
-            var tcs = new TaskCompletionSource<List<JToken>>();
+            var tcs = new TaskCompletionSource<JToken>();
 
             MessageReceivedHandler handler = delegate(object sender, MessageReceivedEventArgs e)
             {
@@ -63,11 +63,11 @@ namespace Rosbridge.Client
                         JToken value_values;
                         if (e.Message.TryGetValue("values", out value_values))
                         {
-                            tcs.SetResult(value_values.ToList());
+                            tcs.SetResult(value_values);
                         }
                         else
                         {
-                            tcs.SetResult(new List<JToken>());
+                            tcs.SetResult(null);
                         }
                     }
                 }
