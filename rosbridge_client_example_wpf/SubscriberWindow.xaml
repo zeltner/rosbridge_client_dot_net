@@ -10,7 +10,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         
-        <Label Grid.Row="0">Received Messages:</Label>
-        <ListBox Grid.Row="1" x:Name="lbMessages" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10"/>
+        <Label x:Name="TopicLabel" Grid.Row="0">Received Messages:</Label>
+        <ListBox Grid.Row="1" x:Name="MessagesListBox" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10"/>
     </Grid>
 </Window>
