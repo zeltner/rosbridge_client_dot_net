@@ -44,7 +44,7 @@ var serviceClient = new ServiceClient("/add_two_ints", md);
 List<dynamic> args = new List<dynamic>();
 args.Add(10);
 args.Add(2);
-var result = s.Call(args);
+var result = serviceClient.Call(args);
 
 // Clean-up
 await subscriber.UnsubscribeAsync();
