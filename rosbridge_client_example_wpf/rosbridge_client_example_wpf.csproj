@@ -61,6 +61,9 @@
     <Compile Include="PublisherWindow.xaml.cs">
       <DependentUpon>PublisherWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ServiceClientWindow.xaml.cs">
+      <DependentUpon>ServiceClientWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SubscriberWindow.xaml.cs">
       <DependentUpon>SubscriberWindow.xaml</DependentUpon>
     </Compile>
@@ -77,6 +80,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="PublisherWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ServiceClientWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

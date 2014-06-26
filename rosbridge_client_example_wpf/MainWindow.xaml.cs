@@ -108,5 +108,13 @@ namespace rosbridge_client_example_wpf
 
             _childWindows.Add(publisherWindow);
         }
+
+        private void StartServiceClientButton_Click(object sender, RoutedEventArgs e)
+        {
+            var serviceClientWindow = new ServiceClientWindow(new ServiceClient(ServiceTextBox.Text, _md));
+            serviceClientWindow.Show();
+
+            _childWindows.Add(serviceClientWindow);
+        }
     }
 }
