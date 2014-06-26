@@ -48,7 +48,7 @@ namespace rosbridge_client_example_wpf
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            ServiceLabel.Content = "Service: \"" + _serviceClient.Service + "\" (";
+            ServiceLabel.Content = "Service: \"" + _serviceClient.Service.Replace("_", "__") + "\"";
         }
 
         private async void CallButton_Click(object sender, RoutedEventArgs e)

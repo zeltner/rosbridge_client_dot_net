@@ -32,7 +32,7 @@ namespace rosbridge_client_example_wpf
 
         private async void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            TopicLabel.Content = "Publish to \"" + _publisher.Topic + "\" (" + _publisher.Type + ")";
+            TopicLabel.Content = "Publish to \"" + _publisher.Topic.Replace("_", "__") + "\" (" + _publisher.Type.Replace("_", "__") + ")";
 
             await _publisher.AdvertiseAsync();
         }

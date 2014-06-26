@@ -6,7 +6,7 @@
         Title="Publisher"
         Loaded="Window_Loaded"
         Unloaded="Window_Unloaded">
-    <Grid>
+    <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -20,8 +20,8 @@
         </Grid.ColumnDefinitions>
         
         <Label x:Name="TopicLabel" Grid.Column="0" Grid.Row="0"></Label>
-        <TextBox x:Name="MessageTextBox" Grid.Column="0" Grid.Row="1"></TextBox>
+        <TextBox x:Name="MessageTextBox" Grid.Column="0" Grid.Row="1" Padding="5"></TextBox>
         <Label Grid.Column="0" Grid.Row="2" FontSize="8">e.g.: {"x" : 1.0, "y" : 2.0, "z": 4.0}</Label>
-        <Button x:Name="PublishButton" Grid.Column="1" Grid.Row="1" Click="PublishButton_Click">Publish</Button>
+        <Button x:Name="PublishButton" Grid.Column="1" Grid.Row="1" Padding="5" Click="PublishButton_Click" Margin="10 0 0 0">Publish</Button>
     </Grid>
 </Window>

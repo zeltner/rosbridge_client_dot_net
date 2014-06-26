@@ -4,7 +4,7 @@
         Title="Subscriber" Height="500" Width="300"
         Loaded="Window_Loaded"
         Unloaded="Window_Unloaded">
-    <Grid>
+    <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>

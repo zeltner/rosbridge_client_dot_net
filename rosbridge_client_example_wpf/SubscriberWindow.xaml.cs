@@ -41,7 +41,7 @@ namespace rosbridge_client_example_wpf
 
         private async void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            TopicLabel.Content = "Subscribe to \"" + _subscriber.Topic + "\" (" + _subscriber.Type + ")";
+            TopicLabel.Content = "Subscribe to \"" + _subscriber.Topic.Replace("_", "__") + "\" (" + _subscriber.Type.Replace("_", "__") + ")";
 
             _subscriber.MessageReceived += _subscriber_MessageReceived;
             await _subscriber.SubscribeAsync();
