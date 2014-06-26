@@ -78,11 +78,11 @@
                 </Grid.ColumnDefinitions>
                 
                 <Label Grid.Column="0" Grid.Row="0">Topic</Label>
-                <TextBox Grid.Column="1" Grid.Row="0" x:Name="TopicTextBox" TextAlignment="Center"></TextBox>
+                <TextBox Grid.Column="1" Grid.Row="0" x:Name="SubTopicTextBox" TextAlignment="Center"></TextBox>
                 <Label Grid.Column="1" Grid.Row="1" FontSize="8">e.g.: /my__topic</Label>
 
                 <Label Grid.Column="2" Grid.Row="0" Margin="10 0 0 0">Message Type</Label>
-                <TextBox Grid.Column="3" Grid.Row="0" x:Name="TypeTextBox" TextAlignment="Center"></TextBox>
+                <TextBox Grid.Column="3" Grid.Row="0" x:Name="SubTypeTextBox" TextAlignment="Center"></TextBox>
                 <Label Grid.Column="3" Grid.Row="1" FontSize="8">e.g.: geometry__msgs/Point</Label>
                 
                 <Button Grid.Column="4" Grid.Row="0" x:Name="StartSubscriberButton" Margin="10 0 0 0" Click="StartSubscriberButton_Click">Start Subscriber</Button>

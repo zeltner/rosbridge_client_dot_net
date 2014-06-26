@@ -58,7 +58,7 @@ namespace rosbridge_client_example_wpf
 
         private void StartSubscriberButton_Click(object sender, RoutedEventArgs e)
         {
-            var subscriberWindow = new SubscriberWindow(new Subscriber(TopicTextBox.Text, TypeTextBox.Text, _md));
+            var subscriberWindow = new SubscriberWindow(new Subscriber(SubTopicTextBox.Text, SubTypeTextBox.Text, _md));
             subscriberWindow.Show();
 
             _childWindows.Add(subscriberWindow);
