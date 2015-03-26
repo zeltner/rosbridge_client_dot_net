@@ -14,11 +14,6 @@ namespace Rosbridge.Client
         private readonly string _uid = MessageDispatcher.GetUID();
 
         /// <summary>
-        /// This event is fired when a new message is received
-        /// </summary>
-        public event MessageReceivedHandler MessageReceived;
-
-        /// <summary>
         /// The topic the subscriber is subscribing to
         /// </summary>
         public string Topic { get; private set; }
