@@ -1,3 +1,7 @@
+**Note**: This repository is archived as I no longer have an environment or up-to-date ROS/.NET knowledge to properly review PRs, add new features or fix bugs. Please fork the repository if you would like to add new features or fix bugs. -- [Stefan](https://github.com/zeltner)
+
+-----
+
 Rosbridge .NET Client
 =====================
 
